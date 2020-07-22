@@ -1,0 +1,40 @@
+{% extends 'layout.njk' %}
+
+{% block head %}
+    <title>Sobre - {{about.name}} </title>
+    <script src="https://use.fontawesome.com/f6b11fbcf5.js"></script>
+{% endblock  %}
+
+{% block content %}
+
+
+    <section class="wrapper">
+
+        <div class="feature">
+            <img src="{{ about.avatar_url }}" alt="Imagem de about.name">
+            <h1>{{about.name}}</h1>
+            <p>{{about.description}}</p>
+        </div>
+
+
+        <div class="container-features">
+            <ul class="main-techs">
+                <h2>Principais Tecnologias</h2>
+                <li>{{about.tecnologias[0]}}</li>
+                <li>{{about.tecnologias[1]}}</li>
+                <li>{{about.tecnologias[2]}}</li>  
+                <li>{{about.tecnologias[3]}}</li>                              
+            </ul>
+            
+            <ul class="social-links">
+                <h2>Redes Sociais</h2>
+                {% for link in about.links %}
+                    <li><i class="fa fa-{{ link.name }}" aria-hidden="true"></i> <a href="{{ link.url }}">{{ link.name }}</a></li>
+                {% endfor %}
+
+            </ul>
+        </div>
+
+    </section>
+
+{% endblock  %}

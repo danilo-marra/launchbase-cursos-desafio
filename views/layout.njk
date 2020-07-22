@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block head %}
+            <title>Danilo Marra</title>
+        {% endblock  %}
+        <link rel="stylesheet" type="text/css" href="/style.css"/>
+        <link rel="icon" href="https://raw.githubusercontent.com/Rocketseat/bootcamp-launchbase-desafios-02/master/desafios/favicon.ico" type="image/x-icon" />
+
+    </head>
+
+    <body>
+        <header>
+            <ul class="menu">
+                <li class="item"><a href="https://discordapp.com/invite/gCRAFhc" target="blank">Comunidade</a></li>
+                <li class="item"><a href="/">Sobre</a></li>
+                <li class="item"><a href="/courses">Conteúdo</a></li>
+                <li class="item"><a href="mailto:oi@rocketseat.com.br">Email</a></li>
+                <li class="item"><a href="tel:+5547992078767">Telefone</a></li>
+            </ul>
+        </header>
+
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

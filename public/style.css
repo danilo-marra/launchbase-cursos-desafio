@@ -1,0 +1,261 @@
+/* CSS RESET */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,400;1,700&display=swap');
+
+:root {
+    --color-green: #50fa7b;
+    --color-rocket: #7159c1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+body {
+    background: #282a36;
+    font-family: 'Roboto', monospace;
+    color: white;
+}
+
+
+header {
+    padding: 30px;
+    border-bottom: 1px solid #333;
+    background: rgba(0, 0, 0, 0.1)
+}
+
+header ul.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+header ul.menu li a {
+    color: white;
+    text-decoration: none;
+    background: #6c4fbb;
+    padding: 5px;
+    /* line-height: 150px; */
+    text-align: center;
+    font-size: 1.2em;
+}
+
+header ul.menu li a:hover {
+    color: blueviolet;
+    transition: color 200ms;
+}
+
+
+/* SOBRE.HTML */
+
+section.wrapper {
+    width: 85%;
+    margin: 50px auto; 
+}
+
+section.wrapper img {
+    border-radius: 50%;
+}
+
+section.wrapper h1, h2 {
+    font-family: Roboto Mono;
+}
+
+section.wrapper h1 {
+    font-size: 2em;
+}
+
+section.wrapper h2 {
+    font-size: 1.3em;
+}
+
+section.wrapper p {
+    text-align: justify;
+}
+
+div.feature {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.feature img {
+    background-color: aqua;
+    width: 15%;
+}
+
+
+
+div.feature h1 {
+    margin-top: 100px;
+    margin-left: 100px;
+
+}
+
+div.feature p {
+    background: rgba(108,79,187, 0.4);
+    padding: 15px;
+    margin-top: 50px;
+    font-weight: 400;
+
+}
+
+div.container-features {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div.container-features ul li {
+    margin: 10px 0;
+    text-decoration: none;
+    list-style: none;
+    
+}
+
+ul.social-links a {
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+ul.social-links a:hover {
+    cursor: pointer;
+    color: #6c4fbb;
+    transition: color 500ms;
+}
+
+
+/*=== CURSOS ===*/
+
+h1.tituloConteudos {
+    margin: 40px 0px;
+    text-transform: uppercase;
+    text-align: center;
+
+} 
+
+.cursos {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.cursos h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.curso {
+    border: 1px solid var(--color-green);
+    cursor: pointer;
+    display: grid;    
+}
+
+.curso-img {
+    text-align: center;
+    display: block;
+    padding-top: 25px;
+}
+
+
+.curso-content, .curso-info {
+    padding: 24px;
+}
+
+.curso-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.curso-price {
+    background-color: var(--color-rocket);
+    filter: brightness(90%);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.curso-info , .curso-price {
+    padding: 5px 20px;
+}
+
+/*== MODAL ==*/
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.modal .close-modal {
+    color: black;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+}
+
+/*== MODAL ACTIVE ==*/
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/*== DESTAQUE ==*/
+
+.curso.featured-wrapper {
+    position: relative;
+}
+
+.featured {
+    background-color: #f7d05f;
+    color: #111;
+    padding: 8px;
+    right: 5px; 
+    top: -19px;
+    position: absolute;
+    border-radius: 15px;
+
+}
+
+/*== CURSO PAGE ==*/
+
+.curso-page {
+    margin: 0px auto;
+    max-width: 1200px;
+}
+
+.curso-page p {
+    margin-bottom: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 1000px;
+    border: 1px solid var(--color-green);
+    padding: 10px;
+}

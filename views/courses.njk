@@ -1,0 +1,42 @@
+{% extends 'layout.njk' %}
+
+{% block head %}
+    <title>Cursos - Danilo Marra</title>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+{% endblock  %}
+
+{% block content %}
+
+    <h1 class="tituloConteudos">Cursos</h1>
+
+    <section class="cursos">
+
+        {% for curso in cursos %}
+            <div class="curso {{ 'featured-wrapper' if curso.featured }}" id="{{curso.title}}">
+                <div class="curso-img">
+                   {% if curso.featured %}
+                        <div class="featured">
+                            Featured
+                        </div>
+                    {% endif %}                     
+                    <img src="{{curso.img_url}}" alt="imagem ícone {{curso.title}}">
+                </div>
+                <div class="curso-content">
+                    <h2>{{curso.title}}</h2>
+                </div>
+                <div class="curso-info">
+                    <p>{{curso.description}}</p>
+                    <p class="curso-price">{{curso.price}}</p>
+                </div>
+            </div>
+        {% endfor %}
+        
+    </section>
+
+
+
+    <script src="/scripts.js"></script>
+
+{% endblock  %}
+
